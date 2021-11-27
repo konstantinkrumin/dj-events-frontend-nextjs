@@ -1,6 +1,6 @@
 import { useRouter } from 'next/Router';
 
-import Layout from '../../components/Layout';
+import Layout from '@/components/Layout';
 
 const EventPage = () => {
   const router = useRouter();
