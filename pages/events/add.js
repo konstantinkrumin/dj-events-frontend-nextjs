@@ -1,7 +1,11 @@
+import Layout from '../../components/Layout';
+
 const AddEventPage = () => {
-  return <div>
+  return (
+    <Layout title="Add New Event">
       <h1>Add Event</h1>
-  </div>;
+    </Layout>
+  );
 };
 
 export default AddEventPage;
