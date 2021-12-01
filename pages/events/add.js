@@ -3,10 +3,11 @@ import { API_URL } from '@/config/index';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Link from 'next/link';
-import 'react-toastify/dist/ReactToastify.css';
 
 import Layout from '@/components/Layout';
+
 import styles from '@/styles/Form.module.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddEventPage = () => {
   const [values, setValues] = useState({
