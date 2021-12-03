@@ -1,34 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DJ Events [Next.JS + Strapi CMS Project]
 
-## Getting Started
+This is a platform that allows you to make posts about DJ Events. You can register / login and perform CRUD operations on the events that were created by you. Frontend is created using Next.JS and deployed on Vercel, and backend is on Strapi CMS and deployed on Heroku.
 
-First, run the development server:
+Stack: **Javascript**, **React**, **Next.JS**, **Strapi CMS**
+
+[Check It Out Here](https://dj-events-frontend-nextjs.vercel.app/)
+
+Alternatively, you can start it locally by getting the following repositories:
+
+- [Frontend Repo](https://github.com/konstantinkrumin/dj-events-frontend-nextjs)
+- [Backend Repo](https://github.com/konstantinkrumin/dj-events-backend-strapi)
+
+1. In the backend directory you need to create `.env` file in the root directory and add your credentials for Cloudinary account and default `host` and `port` there:
 
 ```bash
-npm run dev
-# or
-yarn dev
+    CLOUDINARY_NAME=*****
+    CLOUDINARY_KEY=*****
+    CLOUDINARY_SECRET=*****
+    HOST=0.0.0.0
+    PORT=1337
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. In the frontend directory if you want to show map with event location you will need to add the following keys to the `.env.local` (in the root directory) for you Mapbox and Google Cloud Platform accounts (as well as uncomment `EventMap` component in the `[slug].js` file). Also add `NEXT_PUBLIC_API_URL` and `NEXT_PUBLIC_FRONTEND_URL` with URLs of your backend and frontend (only needed for deployment, locally backend will run on `localhost:1337` and frontend on `localhost:3000`:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+    NEXT_PUBLIC_MAPBOX_API_TOKEN=*****
+    NEXT_PUBLIC_GOOGLE_MAP_API_KEY=*****
+    NEXT_PUBLIC_API_URL=*****
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+    And navigating to ```localhost:3000```. You should see your app running.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. Start backend server with:
 
-## Learn More
+```bash
+    npm run develop
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Start frontend server with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+    npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+P.S. You will need to install the dependencies in both repos if you haven't previously done it:
 
-## Deploy on Vercel
+```bash
+    npm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+_Main Page:_
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![App Image 1](https://i.imgur.com/gL9T92N.png)
+
+_Dashboard Page:_
+
+![App Image 2](https://i.imgur.com/EKILkrj.png)
+
+_Add New Event Page:_
+
+![App Image 2](https://i.imgur.com/rH2mmj5.png)
