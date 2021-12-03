@@ -37,8 +37,6 @@ const EventMap = ({ evt }) => {
 
   if (loading) return false;
 
-  console.log(lat, lng);
-
   return (
     <ReactMapGl {...viewport} mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN} onViewportChange={(vp) => setViewport(vp)}>
       <Marker key={evt.id} latitude={lat} longitude={lng}>
